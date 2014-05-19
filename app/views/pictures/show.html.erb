@@ -1,3 +1,4 @@
 <h1><%= @picture.caption %></h1>
-<a href="http://localhost:3000/delete_picture/<%= @picture.id %>">Delete this picture</a>
+<div><a href="http://localhost:3000/edit_picture_form/<%= @picture.id %>">Edit Picture</a></div>
+<div><a href="http://localhost:3000/delete_picture/<%= @picture.id %>">Delete this picture</a></div>
 <p><img src="<%= @picture.source %>" width = "200" class="img-responsive"></p>
