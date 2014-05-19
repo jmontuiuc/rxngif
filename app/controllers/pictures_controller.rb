@@ -12,6 +12,11 @@ class PicturesController < ApplicationController
   end
 
   def create
-
+    newpic = Picture.new
+    newpic.caption = params[:caption]
+    newpic.source = params[:source]
+    newpic.save
+    redirect_to("http://localhost:3000/all_pictures")
   end
 end
+
