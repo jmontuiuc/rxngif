@@ -1,5 +1,5 @@
 <% picedit = params[:id] %>
-<form >
+<form action="http://localhost:3000/update_picture/<%=picedit %>">
   <div>
     <label for="the_caption">Caption:</label>
     <input value = "<%=Picture.find_by({:id => picedit}).caption %>" id="the_caption" type="text" name="caption">

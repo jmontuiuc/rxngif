@@ -8,7 +8,6 @@ class PicturesController < ApplicationController
   end
 
   def new
-
   end
 
   def create
@@ -25,7 +24,14 @@ class PicturesController < ApplicationController
   end
 
   def edit
+  end
 
+  def update
+    editpic = Picture.find_by({ :id => params[:id] })
+    editpic.caption = params[:caption]
+    editpic.source = params[:source]
+    editpic.save
+    redirect_to("http://localhost:3000/picture_details/#{editpic.id }")
   end
 end
 
